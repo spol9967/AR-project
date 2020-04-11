@@ -8,6 +8,9 @@ const port = 3000
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname + '/index.html'));
 });
+app.get('/index1', function (req, res) {
+  res.sendFile(path.join(__dirname + '/index1.html'));
+});
 app.use('/static', express.static(path.join(__dirname, '/static')));
 
 https.createServer({
